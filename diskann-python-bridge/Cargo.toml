@@ -1,0 +1,18 @@
+[package]
+name = "diskann-python-bridge"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+opentelemetry = { workspace = true }
+
+diskann = { path = "../diskann" }
+diskann-disk = { path = "../diskann-disk" }
+diskann-providers = { path = "../diskann-providers" }
+diskann-vector = { path = "../diskann-vector" }
+diskann-utils = { path = "../diskann-utils" }
+
+[lib]
+name = "diskann_python_bridge"
+crate-type = ["cdylib"]
